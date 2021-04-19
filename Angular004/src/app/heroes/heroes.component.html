@@ -1,0 +1,14 @@
+<!--<h2>{{ heroe}} </h2>-->
+<!-- PADRE-->
+<h2>Lista de hereos</h2>
+<ul class="heroes">
+    <li *ngFor="let item of heroes" (click)="clicItemSeleccionado(item)" [ngClass]="{'selected':item === heroeSeleccionado}">
+        <span class="badge">{{ item.id}}</span>{{ item.nombre }}
+    </li>
+</ul>
+
+<!-- Componente: detalle-heroe-->
+<!-- HIJO-->
+<app-detalle-heroe [heroe]="heroeSeleccionado" [parametroEntrada]="parametro"></app-detalle-heroe>
+
+

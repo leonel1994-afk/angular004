@@ -1,0 +1,12 @@
+<div *ngIf="heroe">
+    <h3><span>Detalle:</span>{{ heroe.nombre | uppercase }}</h3>
+
+      <div><span>Id: </span>{{ heroe.id}}</div>
+
+      <div>
+         <label for="nombre"> Nombre del heroe</label>
+         <input id="nombre" [(ngModel)]="heroe.nombre" placeholder="Nombre">
+      </div>
+</div>
+
+<h1>Parametro: {{ parametroEntrada }}</h1>
